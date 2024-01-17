@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		348EDEBB2B562767009C54DD /* Little_LemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDEBA2B562767009C54DD /* Little_LemonApp.swift */; };
-		348EDEBD2B562767009C54DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDEBC2B562767009C54DD /* ContentView.swift */; };
 		348EDEBF2B56276A009C54DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348EDEBE2B56276A009C54DD /* Assets.xcassets */; };
 		348EDEC22B56276A009C54DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348EDEC12B56276A009C54DD /* Preview Assets.xcassets */; };
+		348EDEC92B57B6A3009C54DD /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDEC82B57B6A3009C54DD /* Onboarding.swift */; };
+		348EDECB2B57EE99009C54DD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDECA2B57EE99009C54DD /* Home.swift */; };
+		348EDECD2B57EFDE009C54DD /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDECC2B57EFDE009C54DD /* Menu.swift */; };
+		348EDECF2B57F76A009C54DD /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDECE2B57F76A009C54DD /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		348EDEB72B562767009C54DD /* Little Lemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		348EDEBA2B562767009C54DD /* Little_LemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonApp.swift; sourceTree = "<group>"; };
-		348EDEBC2B562767009C54DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		348EDEBE2B56276A009C54DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		348EDEC12B56276A009C54DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		348EDEC82B57B6A3009C54DD /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		348EDECA2B57EE99009C54DD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		348EDECC2B57EFDE009C54DD /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		348EDECE2B57F76A009C54DD /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 		348EDEB92B562767009C54DD /* Little Lemon */ = {
 			isa = PBXGroup;
 			children = (
+				348EDECE2B57F76A009C54DD /* UserProfile.swift */,
 				348EDEBA2B562767009C54DD /* Little_LemonApp.swift */,
-				348EDEBC2B562767009C54DD /* ContentView.swift */,
+				348EDEC82B57B6A3009C54DD /* Onboarding.swift */,
+				348EDECA2B57EE99009C54DD /* Home.swift */,
+				348EDECC2B57EFDE009C54DD /* Menu.swift */,
 				348EDEBE2B56276A009C54DD /* Assets.xcassets */,
 				348EDEC02B56276A009C54DD /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348EDEBD2B562767009C54DD /* ContentView.swift in Sources */,
+				348EDEC92B57B6A3009C54DD /* Onboarding.swift in Sources */,
+				348EDECB2B57EE99009C54DD /* Home.swift in Sources */,
+				348EDECF2B57F76A009C54DD /* UserProfile.swift in Sources */,
+				348EDECD2B57EFDE009C54DD /* Menu.swift in Sources */,
 				348EDEBB2B562767009C54DD /* Little_LemonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
