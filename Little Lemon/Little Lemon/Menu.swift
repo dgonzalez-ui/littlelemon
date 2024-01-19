@@ -9,6 +9,22 @@ import SwiftUI
 
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State var searchText = ""
+    
+    func buildPredicate() -> NSPredicate {
+        if (searchText.isEmpty) {
+            return NSPredicate(value: true)
+        } else {
+            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+        }
+    }
+    
+    func buildSortDescriptors() -> [NSSortDescriptor]{
+        return [NSSortDescriptor(key: "title",
+                                 ascending: true,
+                                  selector:
+                                     #selector(NSString.localizedCaseInsensitiveCompare))]
+    }
     
     func getMenuData(){
         PersistenceController.shared.clear()
@@ -26,6 +42,8 @@ struct Menu: View {
                 if let menu = decodedMenu["menu"] {
                     DispatchQueue.main.async {
                         menu.forEach { item in
+                            //guard let _ = exists(name: item.title, viewContext) else { continue }
+                            
                             let dish = Dish(context: viewContext)
                             dish.title = item.title
                             dish.price = item.price
@@ -50,7 +68,9 @@ struct Menu: View {
             Text("Little Lemon")
             Text("Chicago")
             Text("Short Description")
-            FetchedObjects() { (dishes: [Dish]) in
+            TextField("Search menu", text: $searchText)
+            
+            FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                 List{
                     ForEach(dishes){ dish in
                         NavigationLink(destination: DishDetails(dish: dish)) {
