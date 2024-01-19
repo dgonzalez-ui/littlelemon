@@ -53,16 +53,18 @@ struct Menu: View {
             FetchedObjects() { (dishes: [Dish]) in
                 List{
                     ForEach(dishes){ dish in
-                        HStack{
-                            Text("\(dish.title)  \(dish.price)")
-                            Spacer()
-                            AsyncImage(url: URL(string: dish.image)) { image in
-                                image.resizable()
-                                    .aspectRatio(contentMode: .fill)
-                            } placeholder: {
-                                ProgressView()
+                        NavigationLink(destination: DishDetails(dish: dish)) {
+                            HStack{
+                                Text("\(dish.title)  \(dish.price)")
+                                Spacer()
+                                AsyncImage(url: URL(string: dish.image)) { image in
+                                    image.resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .frame(width: 50, height: 50, alignment: .trailing)
                             }
-                            .frame(width: 50, height: 50, alignment: .trailing)
                         }
                     }
                 }

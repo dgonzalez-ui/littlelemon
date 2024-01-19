@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342E0D3A2B5A9E7E00912E4C /* DishDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342E0D392B5A9E7E00912E4C /* DishDetails.swift */; };
 		348EDEBB2B562767009C54DD /* Little_LemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDEBA2B562767009C54DD /* Little_LemonApp.swift */; };
 		348EDEBF2B56276A009C54DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348EDEBE2B56276A009C54DD /* Assets.xcassets */; };
 		348EDEC22B56276A009C54DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348EDEC12B56276A009C54DD /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		342E0D392B5A9E7E00912E4C /* DishDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetails.swift; sourceTree = "<group>"; };
 		348EDEB72B562767009C54DD /* Little Lemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		348EDEBA2B562767009C54DD /* Little_LemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonApp.swift; sourceTree = "<group>"; };
 		348EDEBE2B56276A009C54DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				348EDEC82B57B6A3009C54DD /* Onboarding.swift */,
 				348EDECA2B57EE99009C54DD /* Home.swift */,
 				348EDECC2B57EFDE009C54DD /* Menu.swift */,
+				342E0D392B5A9E7E00912E4C /* DishDetails.swift */,
 				348EDEDE2B58FB98009C54DD /* ExampleDatabase.xcdatamodeld */,
 				348EDEBE2B56276A009C54DD /* Assets.xcassets */,
 				348EDEC02B56276A009C54DD /* Preview Content */,
@@ -173,6 +176,7 @@
 				348EDECB2B57EE99009C54DD /* Home.swift in Sources */,
 				348EDECF2B57F76A009C54DD /* UserProfile.swift in Sources */,
 				348EDED62B58DD8A009C54DD /* Persistence.swift in Sources */,
+				342E0D3A2B5A9E7E00912E4C /* DishDetails.swift in Sources */,
 				348EDECD2B57EFDE009C54DD /* Menu.swift in Sources */,
 				348EDEE02B58FB98009C54DD /* ExampleDatabase.xcdatamodeld in Sources */,
 				348EDEE32B59111B009C54DD /* Dish+CoreDataClass.swift in Sources */,
