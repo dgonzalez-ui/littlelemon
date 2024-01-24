@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		342E0D3A2B5A9E7E00912E4C /* DishDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342E0D392B5A9E7E00912E4C /* DishDetails.swift */; };
+		347CDD822B61255100C92A3E /* MarkaziText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD7A2B61255000C92A3E /* MarkaziText-Medium.ttf */; };
+		347CDD832B61255100C92A3E /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD7B2B61255000C92A3E /* Karla-Bold.ttf */; };
+		347CDD842B61255100C92A3E /* MarkaziText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD7C2B61255000C92A3E /* MarkaziText-Regular.ttf */; };
+		347CDD852B61255100C92A3E /* MarkaziText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD7D2B61255000C92A3E /* MarkaziText-Bold.ttf */; };
+		347CDD862B61255100C92A3E /* Karla-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD7E2B61255000C92A3E /* Karla-Medium.ttf */; };
+		347CDD872B61255100C92A3E /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD7F2B61255000C92A3E /* Karla-Regular.ttf */; };
+		347CDD882B61255100C92A3E /* Karla-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD802B61255100C92A3E /* Karla-ExtraBold.ttf */; };
+		347CDD892B61255100C92A3E /* MarkaziText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD812B61255100C92A3E /* MarkaziText-SemiBold.ttf */; };
 		348EDEBB2B562767009C54DD /* Little_LemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDEBA2B562767009C54DD /* Little_LemonApp.swift */; };
 		348EDEBF2B56276A009C54DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348EDEBE2B56276A009C54DD /* Assets.xcassets */; };
 		348EDEC22B56276A009C54DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348EDEC12B56276A009C54DD /* Preview Assets.xcassets */; };
@@ -26,6 +34,14 @@
 
 /* Begin PBXFileReference section */
 		342E0D392B5A9E7E00912E4C /* DishDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetails.swift; sourceTree = "<group>"; };
+		347CDD7A2B61255000C92A3E /* MarkaziText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Medium.ttf"; sourceTree = "<group>"; };
+		347CDD7B2B61255000C92A3E /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
+		347CDD7C2B61255000C92A3E /* MarkaziText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Regular.ttf"; sourceTree = "<group>"; };
+		347CDD7D2B61255000C92A3E /* MarkaziText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Bold.ttf"; sourceTree = "<group>"; };
+		347CDD7E2B61255000C92A3E /* Karla-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Medium.ttf"; sourceTree = "<group>"; };
+		347CDD7F2B61255000C92A3E /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
+		347CDD802B61255100C92A3E /* Karla-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-ExtraBold.ttf"; sourceTree = "<group>"; };
+		347CDD812B61255100C92A3E /* MarkaziText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-SemiBold.ttf"; sourceTree = "<group>"; };
 		348EDEB72B562767009C54DD /* Little Lemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		348EDEBA2B562767009C54DD /* Little_LemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonApp.swift; sourceTree = "<group>"; };
 		348EDEBE2B56276A009C54DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +71,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		347CDD792B61251500C92A3E /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				347CDD7B2B61255000C92A3E /* Karla-Bold.ttf */,
+				347CDD802B61255100C92A3E /* Karla-ExtraBold.ttf */,
+				347CDD7E2B61255000C92A3E /* Karla-Medium.ttf */,
+				347CDD7F2B61255000C92A3E /* Karla-Regular.ttf */,
+				347CDD7D2B61255000C92A3E /* MarkaziText-Bold.ttf */,
+				347CDD7A2B61255000C92A3E /* MarkaziText-Medium.ttf */,
+				347CDD7C2B61255000C92A3E /* MarkaziText-Regular.ttf */,
+				347CDD812B61255100C92A3E /* MarkaziText-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		348EDEAE2B562767009C54DD = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +107,7 @@
 		348EDEB92B562767009C54DD /* Little Lemon */ = {
 			isa = PBXGroup;
 			children = (
+				347CDD792B61251500C92A3E /* fonts */,
 				348EDF002B5A6A5C009C54DD /* Little-Lemon-Info.plist */,
 				348EDEDA2B58E52F009C54DD /* MenuItem.swift */,
 				348EDEDC2B58E540009C54DD /* MenuList.swift */,
@@ -160,8 +192,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347CDD842B61255100C92A3E /* MarkaziText-Regular.ttf in Resources */,
+				347CDD822B61255100C92A3E /* MarkaziText-Medium.ttf in Resources */,
+				347CDD852B61255100C92A3E /* MarkaziText-Bold.ttf in Resources */,
+				347CDD862B61255100C92A3E /* Karla-Medium.ttf in Resources */,
 				348EDEC22B56276A009C54DD /* Preview Assets.xcassets in Resources */,
 				348EDEBF2B56276A009C54DD /* Assets.xcassets in Resources */,
+				347CDD832B61255100C92A3E /* Karla-Bold.ttf in Resources */,
+				347CDD872B61255100C92A3E /* Karla-Regular.ttf in Resources */,
+				347CDD892B61255100C92A3E /* MarkaziText-SemiBold.ttf in Resources */,
+				347CDD882B61255100C92A3E /* Karla-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
