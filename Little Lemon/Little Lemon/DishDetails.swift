@@ -10,7 +10,6 @@ import SwiftUI
 struct DishDetails: View {
     let dish: Dish
     var body: some View {
-        NavigationView{
             VStack(alignment: .center){
                 ZStack{
                     Rectangle()
@@ -45,7 +44,6 @@ struct DishDetails: View {
                     }.padding(20)
                 }
             } 
-        }
     }
 }
 

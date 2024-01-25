@@ -12,7 +12,6 @@ struct Home: View {
         
     var body: some View {
         TabView{
-            //Might have to change these to instance declaration
             Menu().tabItem({Label("Menu", systemImage: "list.dash")})
             
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
