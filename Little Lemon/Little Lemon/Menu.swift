@@ -2,61 +2,20 @@
 //  Menu.swift
 //  Little Lemon
 //
-//  Created by Rima Tague on 2024-01-17.
+//  Created by Daniel Gonzalez on 2024-01-17.
 //
 
 import SwiftUI
-
-struct DishCard: View {
-    var title = "Title"
-    var description = "Dish Description"
-    var price = "Price"
-    var image = ""
-    
-    var body: some View {
-        HStack(alignment:.center){
-            VStack(alignment:.leading, spacing: 10){
-                Text(title)
-                    .foregroundColor(AppColors.secondaryFour)
-                    .font(.custom("Karla-Bold", size: 18))
-                    .padding(.vertical)
-                Text(description)
-                    .foregroundColor(AppColors.primaryOne)
-                    .font(.custom("Karla-Regular", size: 16))
-                    .frame(maxWidth:225, alignment: .leading)
-                    .lineLimit(2, reservesSpace: true)
-                Text("$\(price)")
-                    .foregroundColor(AppColors.primaryOne)
-                    .font(.custom("Karla-Medium", size: 16))
-            }
-            Spacer()
-            
-            AsyncImage(url: URL(string: image)) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 80, height: 80)
-            } placeholder: {
-                ProgressView()
-            }
-        }
-    }
-}
-
-func predicateBuilder(){
-    
-}
 
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var searchText = ""
     @State var searchCategory = ""
-
-    let rectHeight = 324.0
     
     func dishExists(title: String) -> Bool {
         let fetchRequest = Dish.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "title == %@", title)
-
+        
         do {
             let existingDishes = try viewContext.fetch(fetchRequest)
             if (existingDishes.isEmpty) {
@@ -84,8 +43,8 @@ struct Menu: View {
     func buildSortDescriptors() -> [NSSortDescriptor]{
         return [NSSortDescriptor(key: "title",
                                  ascending: true,
-                                  selector:
-                                     #selector(NSString.localizedCaseInsensitiveCompare))]
+                                 selector:
+                                    #selector(NSString.localizedCaseInsensitiveCompare))]
     }
     
     func getMenuData(){
@@ -127,158 +86,38 @@ struct Menu: View {
         
     }
     var body: some View {
-        NavigationView{
-                VStack{
-                    ZStack(alignment:.leading){
-                        Rectangle()
-                            .fill(AppColors.primaryOne)
-                            .frame(width: 428, height: rectHeight)
-                        VStack(alignment:.leading){
-                            Text("Little Lemon")
-                                .foregroundColor(AppColors.primaryTwo)
-                                .font(.custom("MarkaziText-Medium", size: 64))
-                            Text("Chicago")
-                                .foregroundColor(Color.white)
-                                .font(.custom("MarkaziText-Regular", size: 40))
-                            Spacer()
-                        }.padding(EdgeInsets(top: 35, leading: 30, bottom: 25, trailing: 25))
-                        VStack{
-                            Spacer()
-                            HStack{
-                                VStack(alignment:.leading){
-                                    
-                                    Text("We are a family owned Mediterranean restaurent, focused on traditional recipes served with a modern twist")
-                                        .foregroundColor(Color.white)
-                                        .font(.custom("Karla-Medium", size: 18))
-                                    
-                                }
-                                Image("hero-image")
-                                    .resizable()
-                                    .frame(width:140, height:143)
-                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                
-                            }
-                            HStack{
-                                Image(systemName: "magnifyingglass")
-                                TextField("Search Menu", text: $searchText)
-                            }
-                            .padding(10)
-                            .background(RoundedRectangle(cornerRadius: 12)
-                                .fill(AppColors.secondaryThree)
-                            )
-                        }.padding(EdgeInsets(top: 130, leading: 30, bottom: 30, trailing: 25))
-                        
-                    }
-                    .frame(width:428, height: rectHeight)
-                    CategoryButtons(searchCategory: $searchCategory)
-                    FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
-                        List{
-                            ForEach(dishes){ dish in
-                                NavigationLink(destination: DishDetails(dish: dish)) {
-                                    DishCard(title: dish.title, description: dish.information, price: dish.price, image: dish.image)
-                                }
+        NavigationView {
+            VStack {
+                
+                HeroCard(showSearch: true, searchText: $searchText)
+                CategoryButtons(searchCategory: $searchCategory)
+                FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
+                    List{
+                        ForEach(dishes){ dish in
+                            NavigationLink(destination: DishDetails(dish: dish)) {
+                                DishCard(title: dish.title, description: dish.information, price: dish.price, image: dish.image)
                             }
                         }
                     }
-                }.onAppear{
-                    getMenuData()
                 }
-                .toolbar{
-                    ToolbarItem(placement: .principal) {
-                        Image("header-logo")
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Image("profile-image")
-                            .resizable()
-                            .frame(width:50, height: 50)
-                    }
+            }.onAppear{
+                getMenuData()
+            }
+            .toolbar{
+                ToolbarItem(placement: .principal) {
+                    Image("header-logo")
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Image("profile-image")
+                        .resizable()
+                        .frame(width:50, height: 50)
+                }
+            }
         }
     }
 }
 
-struct CategoryButtons: View{
-    @State var showStarters = false
-    @State var showMains = false
-    @State var showDesserts = false
-    @State var showDrinks = false
-    
-    @Binding var searchCategory: String
-    
-    func checkCategories(){
-        if (!showStarters && !showMains && !showDesserts && !showDrinks){
-            searchCategory = ""
-        }
-    }
-    
-    var body: some View{
-        VStack(alignment:.leading){
-            HStack{
-                Text("ORDER FOR DELIVERY!")
-                    .font(.custom("Karla-ExtraBold", size: 20))
-                Image("delivery-van")
-                    .resizable()
-                    .frame(width:60, height: 30)
-                Spacer()
-            }.padding()
-            HStack(spacing: 20){
-                Toggle("Starters", isOn: $showStarters)
-                    .onChange(of: showStarters) { newValue in
-                        if (showStarters) {
-                            showMains = false
-                            showDesserts = false
-                            showDrinks = false
-                            searchCategory = "starters"
-                        } else {
-                            checkCategories()
-                        }
-                    }.toggleStyle(.button).tint(AppColors.primaryOne)
-                    .background(AppColors.secondaryThree)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                Toggle("Mains", isOn: $showMains)
-                    .onChange(of: showMains) { newValue in
-                        if (showMains) {
-                            showStarters = false
-                            showDesserts = false
-                            showDrinks = false
-                            searchCategory = "mains"
-                        } else {
-                            checkCategories()
-                        }
-                    }.toggleStyle(.button).tint(AppColors.primaryOne)
-                    .background(AppColors.secondaryThree)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                Toggle("Desserts", isOn: $showDesserts)
-                    .onChange(of: showDesserts) { newValue in
-                        if (showDesserts) {
-                            showStarters = false
-                            showMains = false
-                            showDrinks = false
-                            searchCategory = "desserts"
-                        } else {
-                            checkCategories()
-                        }
-                    }.toggleStyle(.button).tint(AppColors.primaryOne)
-                    .background(AppColors.secondaryThree)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                Toggle("Drinks", isOn: $showDrinks)
-                    .onChange(of: showDrinks) { newValue in
-                        if (showDrinks) {
-                            showStarters = false
-                            showMains = false
-                            showDesserts = false
-                            searchCategory = "drinks"
-                        } else {
-                            checkCategories()
-                        }
-                    }.toggleStyle(.button).tint(AppColors.primaryOne)
-                    .background(AppColors.secondaryThree)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-            }.padding()
-        }
-    }
-    
-}
+
 
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {

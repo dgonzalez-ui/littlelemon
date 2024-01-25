@@ -2,7 +2,7 @@
 //  DishDetails.swift
 //  Little Lemon
 //
-//  Created by Rima Tague on 2024-01-19.
+//  Created by Daniel Gonzalez on 2024-01-19.
 //
 
 import SwiftUI

@@ -16,6 +16,10 @@
 		347CDD872B61255100C92A3E /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD7F2B61255000C92A3E /* Karla-Regular.ttf */; };
 		347CDD882B61255100C92A3E /* Karla-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD802B61255100C92A3E /* Karla-ExtraBold.ttf */; };
 		347CDD892B61255100C92A3E /* MarkaziText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347CDD812B61255100C92A3E /* MarkaziText-SemiBold.ttf */; };
+		3484572F2B622083009C1432 /* CategoryButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484572E2B622083009C1432 /* CategoryButtons.swift */; };
+		348457312B62236C009C1432 /* DishCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348457302B62236C009C1432 /* DishCard.swift */; };
+		348457332B6224A5009C1432 /* HeroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348457322B6224A5009C1432 /* HeroCard.swift */; };
+		348457352B625540009C1432 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348457342B625540009C1432 /* Utilities.swift */; };
 		348EDEBB2B562767009C54DD /* Little_LemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EDEBA2B562767009C54DD /* Little_LemonApp.swift */; };
 		348EDEBF2B56276A009C54DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348EDEBE2B56276A009C54DD /* Assets.xcassets */; };
 		348EDEC22B56276A009C54DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348EDEC12B56276A009C54DD /* Preview Assets.xcassets */; };
@@ -42,6 +46,10 @@
 		347CDD7F2B61255000C92A3E /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		347CDD802B61255100C92A3E /* Karla-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-ExtraBold.ttf"; sourceTree = "<group>"; };
 		347CDD812B61255100C92A3E /* MarkaziText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-SemiBold.ttf"; sourceTree = "<group>"; };
+		3484572E2B622083009C1432 /* CategoryButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButtons.swift; sourceTree = "<group>"; };
+		348457302B62236C009C1432 /* DishCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCard.swift; sourceTree = "<group>"; };
+		348457322B6224A5009C1432 /* HeroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCard.swift; sourceTree = "<group>"; };
+		348457342B625540009C1432 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		348EDEB72B562767009C54DD /* Little Lemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		348EDEBA2B562767009C54DD /* Little_LemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonApp.swift; sourceTree = "<group>"; };
 		348EDEBE2B56276A009C54DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,9 +124,13 @@
 				348EDECE2B57F76A009C54DD /* UserProfile.swift */,
 				348EDEBA2B562767009C54DD /* Little_LemonApp.swift */,
 				348EDEC82B57B6A3009C54DD /* Onboarding.swift */,
+				348457342B625540009C1432 /* Utilities.swift */,
 				348EDECA2B57EE99009C54DD /* Home.swift */,
 				348EDECC2B57EFDE009C54DD /* Menu.swift */,
+				348457322B6224A5009C1432 /* HeroCard.swift */,
+				348457302B62236C009C1432 /* DishCard.swift */,
 				342E0D392B5A9E7E00912E4C /* DishDetails.swift */,
+				3484572E2B622083009C1432 /* CategoryButtons.swift */,
 				348EDEDE2B58FB98009C54DD /* ExampleDatabase.xcdatamodeld */,
 				348EDEBE2B56276A009C54DD /* Assets.xcassets */,
 				348EDEC02B56276A009C54DD /* Preview Content */,
@@ -213,12 +225,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				348EDEC92B57B6A3009C54DD /* Onboarding.swift in Sources */,
+				348457332B6224A5009C1432 /* HeroCard.swift in Sources */,
 				348EDECB2B57EE99009C54DD /* Home.swift in Sources */,
+				348457312B62236C009C1432 /* DishCard.swift in Sources */,
 				348EDECF2B57F76A009C54DD /* UserProfile.swift in Sources */,
+				3484572F2B622083009C1432 /* CategoryButtons.swift in Sources */,
 				348EDED62B58DD8A009C54DD /* Persistence.swift in Sources */,
 				342E0D3A2B5A9E7E00912E4C /* DishDetails.swift in Sources */,
 				348EDECD2B57EFDE009C54DD /* Menu.swift in Sources */,
 				348EDEE02B58FB98009C54DD /* ExampleDatabase.xcdatamodeld in Sources */,
+				348457352B625540009C1432 /* Utilities.swift in Sources */,
 				348EDEE32B59111B009C54DD /* Dish+CoreDataClass.swift in Sources */,
 				348EDEDB2B58E52F009C54DD /* MenuItem.swift in Sources */,
 				348EDED72B58DD8A009C54DD /* FetchedObjects.swift in Sources */,
